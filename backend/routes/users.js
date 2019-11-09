@@ -104,4 +104,14 @@ router.put('/profile', requireAuth, upload.single('profileImage'), async functio
   }
 
 });
+//Get logged in user's profile
+router.get('/profile', requireAuth, async function (req, res, next) {
+  try {
+    const user = req.user;
+    res.json(user);
+  }
+  catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
 module.exports = router;
