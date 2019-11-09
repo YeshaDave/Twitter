@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 const { sql_host, sql_port, sql_user, sql_password, sql_database, sql_connectionLimit } = require('../config');
-const { getUsers, saveUsers } = require('./users');
+const { getUsers, saveUsers, editUser } = require('./users');
 
 const options = {
     connectionLimit: sql_connectionLimit,
@@ -33,7 +33,13 @@ const _saveUsers = async whereClause => {
     return saveUsers(connection)(whereClause);
 };
 
+const _editUser = async whereClause => {
+    const connection = await getSQLConnection();
+    return editUser(connection)(whereClause);
+};
+
 module.exports = {
     getUsers: _getUsers,
-    saveUsers: _saveUsers
+    saveUsers: _saveUsers,
+    editUser: _editUser,
 };

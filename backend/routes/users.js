@@ -3,9 +3,12 @@ var router = express.Router();
 const uuidv4 = require('uuid/v4');
 const crypto = require('crypto');
 const jwt = require("jsonwebtoken");
+const path = require('path');
+const multer = require('multer');
+const upload = multer({ dest: path.join(__dirname, '..', 'uploads/') });
 
 const { jwtsecret, encrAlgorithm, encrSecret } = require('../config');
-const { getUsers, saveUsers } = require('../DataAccessLayer');
+const { getUsers, saveUsers, editUser } = require('../DataAccessLayer');
 
 // crypto (can be updated to use 'bcrypt' instead)
 const encrypt = password => {
@@ -60,10 +63,12 @@ router.post('/login', async function (req, res, next) {
     const { results } = await getUsers({ email, password: encrypt(password) });
     if (results.length == 1) {
       const user = results[0];
+      //set the authCookie in browser which contains userID,email and userName
       const authCookie = jwt.sign({
         userID: user.userID,
         email: user.email,
-        isActive: user.isActive === 1
+        isActive: user.isActive === 1,
+        userName: user.userName
       }, jwtsecret, { expiresIn: "7d" });
       res.cookie('authCookie', authCookie, { maxAge: 900000, httpOnly: false, path: '/' });
       return res.json(user);
@@ -74,6 +79,27 @@ router.post('/login', async function (req, res, next) {
   }
   catch (e) {
     res.status(500).send(e.message || e);
+  }
+});
+//Edit user profile
+router.put('/profile', upload.single('profileImage'), async function (req, res, next) {
+  const { email, password, firstName, lastName, city, state, zipcode, profileDesc, userName, isActive } = req.body;
+  const profileImage = req.file ? `/${req.file.filename}` : '';
+  if (!(req.cookies.authCookie)) {
+    console.error("Unauthorised access");
+    return res.status(401).json({ message: "please login to continue" });
+  }
+  try {
+    const loggedinUser = jwt.verify(req.cookies.authCookie, jwtsecret);
+    user = {
+      userID: loggedinUser.userID,
+      email, profileImage, password, firstName, lastName, city, state, zipcode, profileDesc, userName, isActive
+    }
+    await editUser(user);
+    res.json({ message: "Details updated" });
+  }
+  catch (e) {
+    res.status(500).json({ message: e.message });
   }
 
 });
