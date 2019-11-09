@@ -6,4 +6,6 @@ module.exports = {
     sql_database: '',
     sql_connectionLimit: 10,
     initDb: process.env.INITDB === "true",
+    encrAlgorithm: "",
+    encrSecret: "",
 };

@@ -26,6 +26,23 @@ const getUsers = connection => (user = {}) => {
         });
     });
 };
+const saveUsers = connection => (user) => {
+    const { userID, email, password, firstName, lastName, isActive } = user;
+    let query = `insert into ${tableName} (userID, email, password, firstName, lastName, isActive)` +
+        ` VALUES ('${userID}', '${email}', '${password}', '${firstName}', '${lastName}', ${isActive});`;
+    return new Promise((resolve, reject) => {
+        connection.query(query, (error, results, fields) => {
+            // release connection 
+            connection.release();
+            if (error) {
+                reject(error);
+            } else {
+                resolve({ results, fields });
+            }
+        });
+    });
+};
 module.exports = {
-    getUsers
+    getUsers,
+    saveUsers
 };
