@@ -8,4 +8,5 @@ module.exports = {
     initDb: process.env.INITDB === "true",
     encrAlgorithm: "",
     encrSecret: "",
+    jwtsecret: "",
 };

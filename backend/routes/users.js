@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 const uuidv4 = require('uuid/v4');
 const crypto = require('crypto');
+const jwt = require("jsonwebtoken");
 
-const { encrAlgorithm, encrSecret } = require('../config');
+const { jwtsecret, encrAlgorithm, encrSecret } = require('../config');
 const { getUsers, saveUsers } = require('../DataAccessLayer');
 
 // crypto (can be updated to use 'bcrypt' instead)
@@ -48,5 +49,32 @@ router.post('/', async function (req, res, next) {
   }
 
 });
+//user login
+router.post('/login', async function (req, res, next) {
+  const { email, password } = req.body;
+  if (!(email && password)) {
+    console.error('login, email/password missing');
+    return res.status(400).json({ message: "invalid credentials" });
+  }
+  try {
+    const { results } = await getUsers({ email, password: encrypt(password) });
+    if (results.length == 1) {
+      const user = results[0];
+      const authCookie = jwt.sign({
+        userID: user.userID,
+        email: user.email,
+        isActive: user.isActive === 1
+      }, jwtsecret, { expiresIn: "7d" });
+      res.cookie('authCookie', authCookie, { maxAge: 900000, httpOnly: false, path: '/' });
+      return res.json(user);
+    } else {
+      console.error('login, no user found: bad credentials');
+      return res.status(400).json({ message: "bad credentials" });
+    }
+  }
+  catch (e) {
+    res.status(500).send(e.message || e);
+  }
 
+});
 module.exports = router;
