@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const jwt = require("jsonwebtoken");
 const path = require('path');
 const multer = require('multer');
+var passport = require('passport');
 const upload = multer({ dest: path.join(__dirname, '..', 'uploads/') });
 
 const { jwtsecret, encrAlgorithm, encrSecret } = require('../config');
@@ -17,6 +18,9 @@ const encrypt = password => {
   ciphered += cipher.final('hex');
   return ciphered;
 };
+
+// Set up middleware
+var requireAuth = passport.authenticate('jwt', { session: false });
 
 /* get all users test route */
 router.get('/', async function (req, res, next) {
@@ -82,13 +86,10 @@ router.post('/login', async function (req, res, next) {
   }
 });
 //Edit user profile
-router.put('/profile', upload.single('profileImage'), async function (req, res, next) {
+router.put('/profile', requireAuth, upload.single('profileImage'), async function (req, res, next) {
   const { email, password, firstName, lastName, city, state, zipcode, profileDesc, userName, isActive } = req.body;
   const profileImage = req.file ? `/${req.file.filename}` : '';
-  if (!(req.cookies.authCookie)) {
-    console.error("Unauthorised access");
-    return res.status(401).json({ message: "please login to continue" });
-  }
+
   try {
     const loggedinUser = jwt.verify(req.cookies.authCookie, jwtsecret);
     user = {
