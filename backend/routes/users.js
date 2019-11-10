@@ -9,7 +9,7 @@ var passport = require('passport');
 const upload = multer({ dest: path.join(__dirname, '..', 'uploads/') });
 
 const { jwtsecret, encrAlgorithm, encrSecret } = require('../config');
-const { getUsers, saveUsers, editUser } = require('../DataAccessLayer');
+const { getUsers, saveUsers, editUser, deleteUser } = require('../DataAccessLayer');
 
 // crypto (can be updated to use 'bcrypt' instead)
 const encrypt = password => {
@@ -109,6 +109,18 @@ router.get('/profile', requireAuth, async function (req, res, next) {
   try {
     const user = req.user;
     res.json(user);
+  }
+  catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+//Delete the user's account
+router.delete('/', requireAuth, async function (req, res, next) {
+  try {
+    const user = req.user;
+    await deleteUser(user);
+    res.clearCookie('authCookie');
+    res.json({ message: "Account Deleted" });
   }
   catch (e) {
     res.status(500).json({ message: e.message });

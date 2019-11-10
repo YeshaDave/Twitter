@@ -100,8 +100,32 @@ const editUser = connection => (user) => {
         });
     });
 };
+const deleteUser = connection => (user) => {
+    const { userID } = user;
+    let query = `DELETE FROM ${tableName}`;
+    const clause = [];
+
+    if (userID) {
+        clause.push(`userID='${userID}'`);
+    }
+    query += ` where userID='${userID}'`;
+    return new Promise((resolve, reject) => {
+        connection.query(query, (error, results, fields) => {
+            // release connection first!
+            connection.release();
+
+            if (error) {
+                reject(error);
+            } else {
+                resolve({ results, fields });
+            }
+        });
+    });
+
+};
 module.exports = {
     getUsers,
     saveUsers,
     editUser,
+    deleteUser
 };
