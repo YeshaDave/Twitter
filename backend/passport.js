@@ -15,7 +15,7 @@ module.exports = passport => {
             if (results.length == 1) {
                 const user = results[0];
                 delete user.password;
-                callback(null, user);
+                return user.isActive === "true" ? callback(null, user) : callback(new Error("deactivated"));
             }
         } catch (e) {
             callback(e);

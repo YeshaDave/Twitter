@@ -86,7 +86,7 @@ router.post('/login', async function (req, res, next) {
   }
 });
 //Edit user profile
-router.put('/profile', requireAuth, upload.single('profileImage'), async function (req, res, next) {
+router.put('/profile', upload.single('profileImage'), async function (req, res, next) {
   const { email, password, firstName, lastName, city, state, zipcode, profileDesc, userName, isActive } = req.body;
   const profileImage = req.file ? `/${req.file.filename}` : '';
 

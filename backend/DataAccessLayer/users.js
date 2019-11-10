@@ -77,13 +77,8 @@ const editUser = connection => (user) => {
     if (userName) {
         clause.push(`userName='${userName}'`);
     }
-    if (isActive) {
-        if (isActive === "true") {
-            clause.push(`isActive=1`);
-        }
-        if (isActive === "false") {
-            clause.push(`isActive=0`);
-        }
+    if (isActive) { // send boolean value true/false
+        clause.push(`isActive='${isActive}'`);
     }
     query += ` SET ${clause.join(' , ')}`;
     query += ` where userID='${userID}'`;
