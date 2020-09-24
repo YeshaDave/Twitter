@@ -20,3 +20,826 @@
 .App-link {
   color: #09d3ac;
 }
+
+.button {
+  background-color: #29A3EF;
+  width:100px;
+  height: 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 15px
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.logo1 {
+  width: 50px;
+  height: 50px;
+}
+
+.datepicker{
+  margin-top: 10px;
+}
+
+.outer-box1 {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #E6E5F4;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.form{
+  align-content: center;
+  align-items: center;
+}
+
+.signup{
+  background-color: #b2b2b2;
+  margin-top: 10%;
+  margin-bottom: 10%
+}
+.signup2{
+  background-color: #b2b2b2;
+}
+
+.signup1{
+  background-color: #ffffff;
+  text-align:center;
+  margin-right: 20%;
+  margin-left: 25%;
+  margin-top: 7%;
+  margin-bottom: 7%
+}
+
+.form-control1{
+  width:80%;
+  border:none;
+  border-bottom: 1px solid black;
+}
+
+.label{
+  text-align:left;
+  display: block
+}
+
+.elements{
+  background: #f5f8fa;
+  margin-left: 10%;
+  margin-right: 10%
+}
+
+.elements1{
+  height: 35px;
+  width: 100%;
+  background: #f5f8fa;
+  font-size: 20px
+}
+
+.elements2{
+  background: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%
+}
+
+.elements3{
+  background: #f5f8fa;
+}
+
+.landingpage{
+  width:50%;
+  float:left;
+}
+
+.landingpage1{
+  background-image: url("./components/users/twitter3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:50%;
+  height: 100%;
+  float: left;
+  text-align:center;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px
+}
+
+.input{
+  height: 30px;
+  width: 200px;
+  padding-left: 10%;
+  font-size: 22px
+}
+
+.login1{
+  border-color: #29a3ef;
+  border-radius: 20px;
+  height: 40px;
+  width: 80px;
+  font-size: 18px;
+  color: #29a3ef
+}
+
+.buttons1{
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #29a3ef;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff
+}
+
+.buttons3{
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #29a3ef;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff
+}
+
+
+.buttons2{
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  border-color: #29a3ef;
+  font-size: 15px;
+  font-weight: 600;
+  color: #29a3ef
+}
+
+.buttons22{
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border-color: #29a3ef;
+  font-size: 15px;
+  font-weight: 600;
+  color: #29a3ef
+}
+.home-div{
+  padding-left: 25%;
+  margin-top: 10%
+}
+
+.home-div1{
+  padding-left: 10%;
+  margin-top: 1%
+}
+
+.feed{
+  width: auto;
+  /* height: 100%; */
+  float: left;
+  background-color: white;
+  border-right: 1px solid grey
+}
+
+.home-buttons:hover{
+  font-family: Helvetica Neue;
+  font-weight: 600;
+  font-size: 20px;
+  color: #29a3ef;
+  padding-left: 30%
+}
+
+.home-buttons{
+  font-family: Helvetica Neue;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  padding-left: 30%
+}
+
+.home-buttons1{
+  font-family: Helvetica Neue;
+  font-weight: 600;
+  font-size: 20px;
+  color: #29a3ef;
+  padding-left: 30%
+}
+
+.logo4{
+  height: 15px;
+  width: 15px;
+  margin-right: 10%
+}
+
+.logo5{
+  height: 30px;
+  width: 30px;
+  margin-right: 10%
+}
+
+.logo6{
+  height: 30px;
+  width: 30px;
+  margin-right: 10%;
+}
+
+.home-font{
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 1%;
+  margin-left: 1%;
+  border-bottom: 1px;
+  border-color: #E6ECF0;
+  margin-top: 5%;
+  display: flex;
+}
+
+.u-list {
+  box-shadow: 0 0 0 1px rgba(67,41,163,.08), 0 1px 5px 0 rgba(67,41,163,.08);
+  background: #fff;
+  border-radius: 3px;
+  margin-top: 5%;
+  height: 90px;
+}
+
+
+.u-list2 {
+  box-shadow: 0 0 0 1px rgba(67,41,163,.08), 0 1px 5px 0 rgba(67,41,163,.08);
+  background: #fff;
+  border-radius: 3px;
+  height: 90px;
+}
+
+.u-flex-justify{
+  justify-content: space-between;
+}
+.u-flex-align{
+  align-items: center;
+}
+.u-flex{
+  display: flex;
+}
+
+.searchbar {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-color: #E6ECF0;
+  width: 300px;
+  height: 40px;
+  border:none;
+  padding-left: 10px;
+  border-radius: 20px;
+  margin-top: 3%
+}
+
+.searchbar1 {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-color: #E6ECF0;
+  width: 690px;
+  height: 40px;
+  border:none;
+  padding-left: 10px;
+  border-radius: 20px;
+  margin-top: 3%
+}
+
+.msg-block {
+  width: 40%;
+}
+
+.a{
+  text-decoration: none !important;
+}
+
+
+/*login css*/
+/*Background color*/
+.bodylogin {
+  background-color: #E6ECF0;
+  background-size: cover;
+  padding-bottom: 500px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/*Upper Navbar */
+.loginnav {
+  overflow: hidden;
+  background-color: white;
+  margin-right: 0%;
+  margin-left: 0%;
+  margin-top: 0%;
+  margin-bottom: 1%;
+  padding-left: 500px; 
+}
+
+/* Style the topnav links */
+.loginnav a {
+  font-family: aria-hidden;
+  float: left;
+  display: block;
+  color: grey;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+/* Change color on hover */
+
+.loginform{
+  background-color: #ffffff;
+  text-align:center;
+  margin-right: 40%;
+  margin-left: 20%;
+  margin-top: 1%;
+  margin-bottom: 20%
+}
+
+.loginlabel{
+  padding-top: 30px;
+  padding-left: 100px;
+  text-align:left;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: block;
+}
+
+.buttonContainer{
+  background-color: #ffffff;
+  padding-right: 38%;
+  padding-top: 2%;
+}
+
+.loginbutton{
+  background-color: #29a3ef;
+  border-radius: 20px;
+  height: 40px;
+  width: 80px;
+  font-size: 18px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+
+}
+
+.buttonlabel{
+  padding-left: 36%; 
+}
+
+.logincontainer {
+  padding: 8px;
+  text-align: left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-left: 14%;
+}
+
+.loginouterform {
+    width: 400px;
+    height: 200px;  
+    padding: 50px;
+    border: black;
+}
+
+.loginbox {
+  width: 50%;
+  box-shadow: 0 0 5px #E6E5F4;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.columnlogin {
+  width: 200px;
+  height: 50px;
+  border: white;
+}
+
+.logininsideContainer{
+  background-color: #F5F8FA;
+  text-align:center;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.logindownfont{
+  color: grey;
+}
+ 
+.edit{
+  text-decoration: none;
+  color: #657786;
+  font-size: 12px;
+  transition: color .2s ease;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+.fullname {
+  word-break: break-all;
+  color: #14171a;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.listheading {
+  word-break: break-all;
+  color: #14171a;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.u-mar1{
+  margin: 8px;
+  width: 500px;
+}
+.u-mar2{
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 60px;
+}
+
+.u-mar3{
+  margin: 8px;
+  width: 400px;
+}
+
+.snippet {
+  color: #657786;
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 40px;
+  overflow: hidden;
+  position: relative;
+  word-wrap: break-word;
+}
+.u-clickable {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.Link {
+  text-decoration: none;
+}
+
+/*lists css in the application*/
+.list-font{
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-left: 1%;
+  border-bottom: 1px;
+  border-color: #E6ECF0;
+  display: flex;
+}
+
+.word-block {
+  width: 80%;
+}
+
+.letter-block {
+  width: 40%;
+}
+.uppernav {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+
+.uppernav b{
+  text-align:left;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: block;
+  padding-right: 100px;
+}
+
+.uppernav a {
+  float: left;
+  display: block;
+  color: grey;
+  text-align: Left;
+  padding: 4px 6px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+.uppernav a:hover {
+  background-color: rgb(181, 220, 238);
+  color:  #1DA1F2;
+  
+}
+
+.uppernav a.active {
+  background-color: #ffffff;
+  color: black;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: rgb(181, 220, 238);
+  color:  #1DA1F2;
+  
+}
+
+.topnav a.active {
+  background-color: #f1f1f1;
+  color: #1DA1F2;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/*opacity between screens*/
+opacity {
+  background-color: #b2b2b2;
+  padding: 400px 400px;
+}
+
+
+opacity.first {
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+/*Adduser container*/
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* createlist buttons */
+.btn {
+  background-color: rgb(20, 82, 153);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/*The forms in the lists*/
+.containForm {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  padding: 50px 50px;
+  padding-left: 270px;
+  background-color: rgb(138, 132, 132);
+}
+.headertwitter {
+  background-color: #ffffff;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.rest-img{
+  height: 180px;
+  width : 680px;
+  background-color: #CCD6DC;
+}
+
+.listback{
+  background-color: #b2b2b2;
+  background-size: cover;
+  padding-bottom: 500px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+.logoa{
+  position:absolute;
+  left: 20%;
+  top: 190px;
+  margin-left: -100px;
+  z-index: 20;
+  height:120px;
+  width: 120px;
+  border: 10px #E6E5F4;
+  box-shadow: 0 0 1px #E6E5F4;
+  border-radius: 60px
+}
+
+.logob{
+  position:absolute;
+  left: 90%;
+  top: 280px;
+  margin-left: -100px;
+  z-index: 20;
+  height:35px;
+  width: 120px;
+  box-shadow: 0 0 1px #E6E5F4;
+  border-radius: 20px;
+  border-color: #29a3ef;
+  font-size: 15px;
+  font-weight: bold;
+  color: #29a3ef
+}
+.logod{
+  position:absolute;
+  left: 70%;
+  top: 280px;
+  margin-left: -100px;
+  z-index: 20;
+  height:35px;
+  width: 120px;
+  box-shadow: 0 0 1px #E6E5F4;
+  border-radius: 20px;
+  border-color: #29a3ef;
+  font-size: 15px;
+  font-weight: bold;
+  color: #29a3ef
+}
+
+.logoc{
+  position:absolute;
+  left: 90%;
+  margin-left: -100px;
+  z-index: 20;
+  height:35px;
+  width: 80px;
+  box-shadow: 0 0 1px #E6E5F4;
+  border-radius: 20px;
+  border-color: #29a3ef;
+  font-size: 15px;
+  font-weight: bold;
+  color: #29a3ef
+}
+
+.logoe{
+  position:absolute;
+  left: 90%;
+ 
+  /* z-index: 20; */
+  height:35px;
+  width: 80px;
+  box-shadow: 0 0 1px #E6E5F4;
+  border-radius: 20px;
+  border-color: #29a3ef;
+  font-size: 15px;
+  font-weight: bold;
+  color: #29a3ef
+}
+
+.rest-name-div{
+  left: 15%;
+  margin-left: 5px;
+  font-size: 15px
+}
+
+.rest-name-div1{
+  left: 15%;
+  margin-top: 5%;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home-font2{
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 1%;
+  border-bottom: 1px;
+  border-color: #E6ECF0;
+  display: flex;
+}
+
+.divs:hover{
+  background-color: #f5fcff;
+  color: #29A3EF;
+  height: 40px;
+  align-content: center;
+  align-items: center;
+  padding-left:60px 
+}
+
+.divs{
+  background-color: white;
+  color: black;
+  height: 40px;
+  align-content: center;
+  align-items: center;
+  padding-left:60px ;
+  justify-content: center
+}
+
+.tweets-div{
+  border: 1px solid #CCD6DC;
+  margin-bottom: 10px;
+}
+
+.tweets-div1{
+  border: 1px solid #CCD6DC;
+  border-bottom: none;
+}
+
+.tweets-div:hover{
+  border: 1px solid #CCD6DC;
+  background-color: #F5F5F5
+}
+
+.tweets-img{
+  height: 300px;
+  width: 80%;
+  margin: 10px 5% 30px 11%;
+  border: 1px solid lightgray;
+  border-radius: 10px; 
+  
+}
+
+.img-tweets-div{
+  border-radius: 5%
+}
+
+.buttons-div{
+  float: left;
+}
+
+.u-list1 {
+  box-shadow: 0 0 0 1px rgba(67,41,163,.08), 0 1px 5px 0 rgba(67,41,163,.08);
+  background: #fff;
+  border-radius: 3px;
+  margin-top: 2%;
+  height: auto;
+}
+
+.feed1{
+  width: auto;
+  height: 100%;
+  float: left;
+  background-color: white;
+
+}
+
+.feed2{
+  width: auto;
+  height: 100%;
+  float: left;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.inner-element{
+  width: 33%;
+  margin-right: 3%;
+}
+
+.followers-box{
+  background: #fff;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 3px;
+  border-top: 1px solid lightgrey;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  height: 90px;
+}
+
+.a{
+  text-decoration: none;
+}

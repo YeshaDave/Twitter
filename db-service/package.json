@@ -1,0 +1,14 @@
+{
+  "name": "db-service",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node DataProcessor.js"
+  },
+  "dependencies": {
+    "kafka-node": "^5.0.0",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.12",
+    "mysql": "^2.17.1"
+  }
+}
